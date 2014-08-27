@@ -100,7 +100,8 @@ AutoFigure_nlcd <- function(TargetUnit,
                      xlab("Area Extent")
    } else if (length(Year)>1&length(TargetUnit)==1) {
        #     multiple Year single unit facet by Year
-       Fig <- ggplot(dsn,
+        FullName <- dsn$FullName[1]
+        Fig <- ggplot(dsn,
                      aes(x=AOA, y=PCT_AREA,fill=CLASSNAME)) +
                      geom_bar(stat='identity', width=0.75, position= position_stack(width=.5)) +
                      scale_fill_manual(values=Palette,
