@@ -11,9 +11,10 @@ source(paste(GitDir,'fetch_nlcd.R',sep='/'))
 source(paste(GitDir,'AutoFigure_nlcd.R',sep='/'))
 
 
+# note that correct values for uid and pwd need to be inserted for ***** in the line below
 NPScapeConnectString <- paste("Driver=SQL Server; ",
                               "Server=INP2300FCSWUPA5\\GISDATA; ",
-                              "uid=NPScape_Viewer;pwd=viewer2013…;",
+                              "uid=**********;pwd=*********;",
                               sep='')
                               
 #INP2300FCSWUPA5\GISDATA                              
