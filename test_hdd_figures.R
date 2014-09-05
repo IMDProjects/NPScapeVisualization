@@ -5,9 +5,10 @@ inst <- pkgList %in% installed.packages()
 if (length(pkgList[!inst]) > 0) install.packages(pkgList[!inst])
 lapply(pkgList, library, character.only = TRUE)
 
+# note that correct values for uid and pwd need to be inserted for ***** in the line below
 NPScapeConnectString <- paste("Driver=SQL Server; ",
                               "Server=INP2300FCSWUPA5\\GISDATA; ",
-                              "uid=NPScape_Viewer;pwd=viewer2013…;",
+                              "uid=******;pwd=*********;",
                               sep='')
                               
 #INP2300FCSWUPA5\GISDATA                              
