@@ -46,9 +46,7 @@ AutoFigure_hdd <- function(TargetUnit,
        # subset dsn passed as parameter
        dsn <- dsn[dsn$UNIT_CODE%in%TargetUnit&dsn$AOA%in%AOA,]
    }
-LabelType <- 'Raw' #'Lumped'
-LabelType <- 'Lumped'  #'Raw'
-LabelTYpe <- 'Name'
+
 #######################################
     # grab colormaps
     # bad form, but stash them in top level environment so that they can be used again without repeated call to SQL Server
