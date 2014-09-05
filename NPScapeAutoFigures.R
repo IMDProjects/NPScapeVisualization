@@ -20,23 +20,19 @@ library(beep)  # dinger for my use
 
 ##################################
 #  ODBC call to NPScape SQL Server in Fort Collins
-#odbcNPScape <- odbcDriverConnect("Driver=SQL Server; Server=INP2300FCSGUMO6\\GIS_Working_Data; uid=npscape_reader;pwd=npsc@pe20!!;")
+#odbcNPScape <- odbcDriverConnect("Driver=SQL Server; Server=INP2300FCSGUMO6\\GIS_Working_Data; uid=****;pwd=**********;")
 
 
-NPScapeConnectStringOld <- paste("Driver=SQL Server; ",
-                              "Server=\\\\INP2300FCSWUPA5\\GISDATA; ",
-                              "uid=npscape_reader;pwd=npsc@pe20!!;",
-                              sep='')
 NPScapeConnectString <- paste("Driver=SQL Server; ",
                               "Server=INP2300FCSWUPA5\\GISDATA; ",
-                              "uid=NPScape_Viewer;pwd=viewer2013…;",
+                              "uid=****;pwd=*;",
                               sep='')
                               
 #INP2300FCSWUPA5\GISDATA                              
  odbcNPScape <- odbcDriverConnect(NPScapeConnectString)
                              
 #odbcNPScape <- odbcConnect("NPScape_Stats",
-#                        uid="NPScape_Viewer",pwd='viewer2013…') 
+#                        uid="NPScape_Viewer",pwd='viewer2013â€¦') 
 # List of Tables & Views (stored queries)
 ##################################
 TableList <- sqlTables(odbcNPScape)[2:4]
